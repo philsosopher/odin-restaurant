@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;700&display=swap');
+
 
 
 :root {
@@ -15,7 +17,7 @@
     /* Accent Colors (Rick & Morty inspired) */
     --color-accent-green: #65f3a0;     /* Portal green */
     --color-accent-blue: #3498db;      /* Rick's blue shirt */
-    --color-accent-yellow: #f1c40f;    /* Morty's shirt */
+    --color-accent-yellow: #edc629;    /* Morty's shirt */
     --color-accent-purple: #9b59b6;    /* Sci-fi vibe */
   
     /* Text Colors */
@@ -26,6 +28,11 @@
     /* Borders and Shadows */
     --color-border: #444c56;
     --shadow-soft: 0 4px 12px rgba(0, 255, 204, 0.1); /* Cyan glow */
+
+
+
+    /* font */
+    --theme-font: 'Orbitron', sans-serif;
 }
   
 ::selection {
@@ -78,7 +85,7 @@ footer {
     border-top: 2px solid var(--color-accent-green);
 }
 
-main.home .brand {
+main .brand {
     font-family: 'Parisienne', cursive;
     font-size: 4rem;
     text-shadow: -1px 0px 22px rgba(0,0,0,0.79);
@@ -89,7 +96,7 @@ main.home .brand {
 
 
 
-main.home .name {
+main .name {
     font-family: 'Share Tech Mono', monospace;
     font-size: 4.5rem;
     text-shadow: -1px 0px 22px rgba(0,0,0,0.99);
@@ -131,4 +138,45 @@ main.home button:hover {
 main.home p {
     max-width: 50rem;
     text-align: center;
+}
+
+
+/* Menu */
+
+main.menu {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: start;
+    gap: 30px;
+}
+
+main.menu .menu-item{
+    text-align: center;
+    font-family: 'Oxanium', sans-serif;
+    text-shadow: -2px 0px 22px rgba(0,0,0,1);
+}
+
+.item-price {
+    font-family: var(--theme-font);
+    color: var(--color-accent-yellow);
+}
+
+.menu-item p {
+    font-size: 1.3rem;
+}
+
+.item-name {
+    font-family: 'Parisienne', cursive;
+    font-size: 2.3rem;
+    color: var(--color-accent-yellow); 
+}
+
+.menu-separator {
+    border: none;
+    height: 2px;
+    background-color: var(--color-accent-green); /* or any color you prefer */
+    width: 250px;  /* Adjust width as needed */
+    margin: 5px auto;  /* Centers it and adds spacing */
 }
