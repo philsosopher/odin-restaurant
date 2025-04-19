@@ -1,6 +1,7 @@
 export function loadPage() {
     // Reference to the outer container
     const content = document.querySelector('.content');
+    content.innerHTML = '';
 
     // Create the main container
     const main = document.createElement('main');

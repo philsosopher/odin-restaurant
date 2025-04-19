@@ -1,6 +1,9 @@
+import { loadPage as loadMenuPage } from "./menu.js";
+
 export function loadPage() {
     // Get the container (make sure it exists in your HTML)
     const content = document.querySelector('.content');
+    content.innerHTML = '';
 
     // Create <main> with class "home"
     const main = document.createElement('main');
@@ -25,6 +28,7 @@ export function loadPage() {
     const button = document.createElement('button');
     button.classList.add('view-menu');
     button.textContent = "View Menu";
+    button.addEventListener("click", loadMenuPage);
 
     // Append all to main
     main.appendChild(brand);
